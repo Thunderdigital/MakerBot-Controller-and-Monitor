@@ -412,7 +412,7 @@ def move_home_z():
     try:
         rpc_call_raw('{"params": {}, "jsonrpc": "2.0", "method": "close_queue"}')
         rpc_call_raw('{"params": {"clear": true}, "jsonrpc": "2.0", "method": "open_queue"}')
-        rpc_call_raw('{"params": {"machine_func": "move", "params": {"point_mm":[0,50,0,0], "mm_per_second":100.0, "relative":[false, false, true, true]}}, "jsonrpc": "2.0", "method": "machine_query_command"}')
+        rpc_call_raw('{"params": {"machine_func": "move", "params": {"point_mm":[0,0,0,0], "mm_per_second":100.0, "relative":[false, false, true, true]}}, "jsonrpc": "2.0", "method": "machine_query_command"}')
         rpc_call_raw('{"params": {"machine_func": "move", "params": {"point_mm":[0,0,0,0], "mm_per_second":3.0, "relative":[true, true, false, true]}}, "jsonrpc": "2.0", "method": "machine_query_command"}')
         rpc_call_raw('{"params": {}, "jsonrpc": "2.0", "method": "execute_queue"}')
         return "Move process", None 
@@ -985,4 +985,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
