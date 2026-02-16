@@ -890,6 +890,8 @@ def main():
         'J': action_menu_J,
         'K': action_menu_K,
         'L': action_menu_L,
+        'M': action_menu_M,
+        'N': action_menu_N,
 
         '\x18': action_menu_x,
         '\r': action_menu_enter,
@@ -987,3 +989,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
